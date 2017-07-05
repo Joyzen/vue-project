@@ -1,33 +1,82 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <el-button @click.native="startHacking">Let's do it</el-button>
+    <el-row >
+      <el-col ><v-head></v-head></el-col>
+    </el-row>
+    
+    <el-col :span="5">
+      <el-row><div class="grid-content"></div></el-row>
+      <el-row><div class="grid-content"></div></el-row>
+      <el-menu default-active="2" class="el-menu-vertical-demo" theme="light">
+        <el-submenu index="1">
+          <template slot="title">导航一</template>
+          <el-menu-item-group title="分组一">
+            <el-menu-item index="1-1">选项1</el-menu-item>
+            <el-menu-item index="1-2">选项2</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="分组2">
+            <el-menu-item index="1-3">选项3</el-menu-item>
+          </el-menu-item-group>
+          <el-submenu index="1-4">
+            <template slot="title">选项4</template>
+            <el-menu-item index="1-4-1">选项1</el-menu-item>
+          </el-submenu>
+        </el-submenu>
+        <el-menu-item index="2">导航二</el-menu-item>
+        <el-menu-item index="3">导航三</el-menu-item>
+      </el-menu>
+
+    </el-col>
+    <el-col :span="11" :offset="3">
+      <el-row><div class="grid-content"></div></el-row>
+      <v-form></v-form>   
+    </el-col> 
   </div>
 </template>
 
 <script>
+
+import vHead from './common/Header.vue';
+import vForm from './component/form.vue';
+
 export default {
-  data () {
-    return {
-      msg: 'Use Vue 2.0 Today!'
+        components:{
+            vHead,vForm
+        },
+        data() {
+          return {
+            form: {
+              name: '',
+              region: '',
+              date1: '',
+              date2: '',
+              delivery: false,
+              type: [],
+              resource: '',
+              desc: ''
+            }
+          }
+        },
+        methods: {
+          onSubmit() {
+            console.log('submit!');
+          }
+        }
     }
-  },
 
-  methods: {
-    startHacking () {
-      this.$notify({
-        title: 'It Works',
-        message: 'We have laid the groundwork for you. Now it\'s your time to build something epic!',
-        duration: 6000
-      })
-    }
-  }
-}
 </script>
-
 <style>
 body {
   font-family: Helvetica, sans-serif;
 }
+
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+
+  .grid-content {
+    border-radius: 10px;
+    min-height: 36px;
+  }
+ 
 </style>
