@@ -5,31 +5,18 @@
     </el-row>
     
     <el-col :span="5">
-      <el-row><div class="grid-content"></div></el-row>
-      <el-row><div class="grid-content"></div></el-row>
-      <el-menu default-active="2" class="el-menu-vertical-demo" theme="light">
-        <el-submenu index="1">
-          <template slot="title">导航一</template>
-          <el-menu-item-group title="分组一">
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="分组2">
-            <el-menu-item index="1-3">选项3</el-menu-item>
-          </el-menu-item-group>
-          <el-submenu index="1-4">
-            <template slot="title">选项4</template>
-            <el-menu-item index="1-4-1">选项1</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="2">导航二</el-menu-item>
-        <el-menu-item index="3">导航三</el-menu-item>
-      </el-menu>
+      <v-sidebar></v-sidebar>
 
     </el-col>
-    <el-col :span="11" :offset="3">
-      <el-row><div class="grid-content"></div></el-row>
-      <v-form></v-form>   
+    <el-col :span="15" >
+      <div class="content">
+        <v-form></v-form>   
+      </div>
+    </el-col> 
+    <el-col :span="4" >
+      <div class="content">
+        <vForm></vForm>   
+      </div>
     </el-col> 
   </div>
 </template>
@@ -37,25 +24,12 @@
 <script>
 
 import vHead from './common/Header.vue';
+import vSidebar from './common/Sidebar.vue';
 import vForm from './component/form.vue';
 
 export default {
         components:{
-            vHead,vForm
-        },
-        data() {
-          return {
-            form: {
-              name: '',
-              region: '',
-              date1: '',
-              date2: '',
-              delivery: false,
-              type: [],
-              resource: '',
-              desc: ''
-            }
-          }
+            vHead,vForm,vSidebar
         },
         methods: {
           onSubmit() {
@@ -66,9 +40,9 @@ export default {
 
 </script>
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
+  body {
+    font-family: Helvetica, sans-serif;
+  }
 
   .bg-purple-dark {
     background: #99a9bf;
@@ -78,5 +52,11 @@ body {
     border-radius: 10px;
     min-height: 36px;
   }
- 
+ .content{
+    background: none repeat scroll 0 0 #fff;
+    width: auto;
+    padding:40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
 </style>

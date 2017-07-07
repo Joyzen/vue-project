@@ -82,7 +82,8 @@
         },
         computed:{
             onRoutes(){
-                return this.$route.path.replace('/','');
+                //return this.$route.path.replace('/','');
+                return '';
             }
         }
     }
@@ -91,11 +92,7 @@
 <style scoped>
     .sidebar{
         display: block;
-        position: absolute;
         width: 250px;
-        left: 0;
-        top: 70px;
-        bottom:0;
         background: #2E363F;
     }
     .sidebar > ul {

@@ -18,7 +18,7 @@
     export default {
         data() {
             return {
-                name: 'linxin'
+                name: 'joyzen'
             }
         },
         computed:{
@@ -39,6 +39,7 @@
 </script>
 <style scoped>
     .header {
+        border-radius: 1px;
         position: relative;
         box-sizing: border-box;
         width: 100%;
