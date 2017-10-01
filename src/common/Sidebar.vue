@@ -27,27 +27,23 @@
                     {
                         icon: 'el-icon-setting',
                         index: 'readme',
-                        title: '自述'
+                        title: '用户管理'
                     },
                     {
                         icon: 'el-icon-menu',
                         index: '2',
-                        title: '表格',
+                        title: '班级管理',
                         subs: [
                             {
                                 index: 'basetable',
-                                title: '基础表格'
-                            },
-                            {
-                                index: 'vuetable',
-                                title: 'Vue表格组件'
+                                title: '班级信息维护'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-date',
                         index: '3',
-                        title: '表单',
+                        title: '教育经历',
                         subs: [
                             {
                                 index: 'baseform',
@@ -56,9 +52,24 @@
                             {
                                 index: 'vueeditor',
                                 title: '编辑器'
+                            },{
+                                index: 'vueeditor1',
+                                title: '编辑器'
+                            },{
+                                index: 'vueeditor2',
+                                title: '编辑器'
+                            },{
+                                index: 'vueeditor3',
+                                title: '编辑器'
+                            },{
+                                index: 'vueeditor4',
+                                title: '编辑器'
+                            },{
+                                index: 'vueeditor5',
+                                title: '编辑器'
                             },
                             {
-                                index: 'markdown',
+                                index: 'markdown6',
                                 title: 'markdown'
                             },
                             {
@@ -93,9 +104,19 @@
     .sidebar{
         display: block;
         width: 250px;
-        background: #2E363F;
+        background: #eef1f6;
+        overflow-y: auto;
+        margin-bottom: 0px;
+        position: fixed;
+        top: 70px;
+        bottom: 0px;
     }
     .sidebar > ul {
         height:100%;
+    }
+    .btn{
+        position: fixed;
+        bottom: 30px;
+        left: 230px;
     }
 </style>
