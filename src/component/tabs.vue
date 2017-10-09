@@ -14,10 +14,11 @@
 <<script>
 
 import vForm from './form.vue';
+import mapc from './../common/map.vue';
 
 export default {
     components:{
-            vForm
+            vForm,mapc
     },
     data(){
         return {
@@ -25,7 +26,7 @@ export default {
                 {
                     title:'地图',
                     name:'tab_map',
-                    component:'vForm',
+                    component:'mapc',
                 },{
                     title:'列表',
                     name:'tab_panel',
