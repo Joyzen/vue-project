@@ -45,7 +45,7 @@
         /* width: 100%; */
         height: 60px;
         font-size: 22px;
-        line-height: 70px;
+        line-height: 60px;
         color: #fff;
         top: 5px;
         left: 10px;
