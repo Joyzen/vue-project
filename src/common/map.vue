@@ -1,17 +1,18 @@
 <template>
     <div class="amap-page-container">
-      <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo">
+      <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" 
+        :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo" @complete="hideAmapLogo">
       </el-amap>
 
-      <div class="toolbar">
+      <!-- <div class="toolbar">
         <button @click="getMap()">get map</button>
-      </div>
+      </div> -->
     </div>
   </template>
 
   <style>
     .amap-page-container {
-      height: 500px;
+      height: 540px;
       width: 100%;
     }
   </style>
@@ -62,6 +63,9 @@
           console.log(amapManager._componentMap);
           // gaode map instance
           console.log(amapManager._map);
+        },
+        hideAmapLogo(){
+
         }
       }
     };

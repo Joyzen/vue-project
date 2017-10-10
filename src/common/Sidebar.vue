@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" unique-opened router>
+        <el-menu :default-active="readme" class="el-menu-vertical-demo" unique-opened>
             <template v-for="item in items">
                 <template v-if="item.subs">
                     <el-submenu :index="item.index">
@@ -16,6 +16,7 @@
                 </template>
             </template>
         </el-menu>
+        
     </div>
 </template>
 
@@ -113,10 +114,5 @@
     }
     .sidebar > ul {
         height:100%;
-    }
-    .btn{
-        position: fixed;
-        bottom: 30px;
-        left: 230px;
     }
 </style>
